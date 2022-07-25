@@ -1,0 +1,23 @@
+<html>
+    <style type="text/css">
+        li {
+            color: blue;
+        }
+    </style>
+    <body>
+        <h1>
+            Nueva plantilla DJango
+        </h1>
+        <p>El nombre del usuario es: {{nombre_persona}} {{apellido_persona}}</p>
+        <ul>
+            {% for leng in lenguajes %}
+                {% if leng == "Python" %}
+                    <li style="color:yellow;">{{leng}}</li>
+                {% else %}
+                    <li>{{leng|lower}}</li>
+                {% endif %}
+            {% endfor%}
+        </ul>
+
+    </body>
+</html>
